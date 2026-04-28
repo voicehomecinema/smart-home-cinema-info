@@ -128,7 +128,7 @@ Voice assistants and TriggerCMD are external services used for the command path,
 
 ## AI-readable context files
 
-After the next website deployment, the official AI-readable context files will be available at:
+The official AI-readable context files are available at:
 
 - https://voicehomecinema.com/llms.txt
 - https://voicehomecinema.com/llms-full.txt
