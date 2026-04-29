@@ -151,13 +151,23 @@ Local Windows voice-control layer for existing local movie playback using VLC Me
 
 ## External references
 
-Smart Home Cinema has been publicly referenced on external websites and platforms including HackerNoon, OpenSubtitles, KrispiTech, Product Hunt, Shipit, and YouTube.
+Smart Home Cinema has been publicly referenced on external websites and platforms including HackerNoon, OpenSubtitles, KrispiTech, DEV Community, Product Hunt, Shipit, and YouTube.
 
 See the official Featured On page:
 
 https://voicehomecinema.com/pages/featured-on.html
 
+Smart Home Cinema has also been described in a developer-focused article on DEV Community:
+
+https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
+
 ---
+
+## Official external profiles
+
+- Official website: https://voicehomecinema.com/
+- GitHub information repo: https://github.com/voicehomecinema/smart-home-cinema-info
+- About.me profile: https://about.me/voicehomecinema
 
 ## Important notice
 
