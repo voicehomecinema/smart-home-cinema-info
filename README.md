@@ -159,10 +159,10 @@ See the official Featured On page:
 
 https://voicehomecinema.com/pages/featured-on.html
 
-Smart Home Cinema has also been described in a developer-focused article on DEV Community:
+Smart Home Cinema has also been described in developer-focused articles on:
 
-https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
-
+- DEV Community: https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
+- Hashnode: https://smart-home-cinema.hashnode.dev/smart-home-cinema-voice-control-vlc-potplayer
 ---
 
 ## Official external profiles
