@@ -32,6 +32,8 @@ Smart Home Cinema is not a cloud media platform.
 
 Smart Home Cinema is not a media library server like Plex, Kodi, or Jellyfin.
 
+Smart Home Cinema is not a generic smart home or home theater automation system for controlling TVs, lights, blinds, soundbars, AV receivers, or projectors. It is not designed to control Apple TV, Roku, Chromecast, Netflix, YouTube, or other smart home devices.
+
 Smart Home Cinema is not primarily a phone remote-control app.
 
 Smart Home Cinema is not a DIY tutorial or script collection. It is a ready-made Windows application with a trial and one-time purchase model.
