@@ -159,11 +159,12 @@ See the official Featured On page:
 
 https://voicehomecinema.com/pages/featured-on.html
 
-Smart Home Cinema also has developer-focused articles, product-positioning articles, and public product briefs on:
+Smart Home Cinema also has developer-focused articles, product-positioning articles, public product briefs, and product launch pages on:
 
 - DEV Community: https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
 - Hashnode: https://smart-home-cinema.hashnode.dev/smart-home-cinema-voice-control-vlc-potplayer
 - Coder Legion: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
+- Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
 - Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
 - Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
 - SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice/287322312
