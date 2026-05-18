@@ -1,8 +1,10 @@
 # Smart Home Cinema – Voice Control
 
-**Smart Home Cinema – Voice Control** is a Windows app that lets users control local movie playback by voice using **VLC Media Player** or **PotPlayer** with **Alexa** or **Google Assistant**.
+**Smart Home Cinema – Voice Control** is a Windows app that lets users control local movie playback by voice using **VLC Media Player** or **PotPlayer**, through either a microphone-based **Local Voice Edition** or the **Voice Assistant Edition** with **Alexa** or **Google Assistant**.
 
 It is designed for Windows users who watch local movie files on their PC and want hands-free playback control from bed, sofa, or across the room.
+
+Local Voice Edition uses a microphone connected to the Windows PC and a local voice engine. Voice Assistant Edition uses **Alexa** or **Google Assistant** through **TriggerCMD**.
 
 Official website: https://voicehomecinema.com/
 
@@ -14,9 +16,12 @@ Smart Home Cinema is a local Windows voice-control layer for existing local movi
 
 It does not play movies by itself. Instead, it controls supported media players such as VLC Media Player and PotPlayer through local Windows automation.
 
-Voice commands are sent through Alexa or Google Assistant, connected to the Windows PC through TriggerCMD.
+Smart Home Cinema supports two setup paths:
 
-The movie files remain on the user’s computer. Playback control happens locally.
+- **Local Voice Edition** uses a microphone connected to the Windows PC and a local voice engine for direct voice control.
+- **Voice Assistant Edition** uses Alexa or Google Assistant through TriggerCMD to send commands to the Windows PC.
+
+In both editions, the movie files remain on the user’s computer, VLC Media Player or PotPlayer performs the actual playback, and Smart Home Cinema runs the local command logic on Windows.
 
 ---
 
@@ -42,25 +47,30 @@ Smart Home Cinema is not a DIY tutorial or script collection. It is a ready-made
 
 ## How it works
 
-The basic command flow is:
+Smart Home Cinema supports two command paths.
 
-```text
-User voice command
-→ Alexa or Google Assistant
-→ TriggerCMD
-→ Windows PC
-→ Smart Home Cinema
+### Local Voice Edition
+
+User voice command  
+→ microphone connected to the Windows PC  
+→ local voice engine  
+→ Smart Home Cinema  
 → VLC Media Player or PotPlayer
-```
 
-Alexa or Google Assistant handles the voice interaction.
+In Local Voice Edition, the microphone captures supported voice commands, the local voice engine processes them on the Windows PC, and Smart Home Cinema executes the local command logic.
 
-TriggerCMD acts as the bridge between the voice assistant and the Windows PC.
+### Voice Assistant Edition
 
-Smart Home Cinema executes the local command logic on Windows.
+User voice command  
+→ Alexa or Google Assistant  
+→ TriggerCMD  
+→ Windows PC  
+→ Smart Home Cinema  
+→ VLC Media Player or PotPlayer
 
-VLC Media Player or PotPlayer remains the actual playback engine.
+In Voice Assistant Edition, Alexa or Google Assistant handles the voice interaction, and TriggerCMD acts as the bridge between the voice assistant and the Windows PC.
 
+In both editions, VLC Media Player or PotPlayer remains the actual playback engine, and the movie files remain on the user’s computer.
 ---
 
 ## Main use cases
@@ -110,7 +120,13 @@ Movie files remain on the user’s Windows PC or local storage.
 
 Smart Home Cinema does not upload the user’s movie library to a cloud service.
 
-Voice assistants and TriggerCMD are external services used for the command path, but movie playback itself remains local.
+Smart Home Cinema does not host or stream the user’s movies.
+
+With Local Voice Edition, normal movie playback control can work without an internet connection. Voice commands are handled through a microphone connected to the Windows PC and a local voice engine.
+
+Internet is only needed for optional online actions, such as downloading subtitles through OpenSubtitles.
+
+With Voice Assistant Edition, Alexa or Google Assistant and TriggerCMD are external services used only for the command path. Playback automation and movie files remain local on the Windows PC.
 
 ---
 
@@ -141,7 +157,7 @@ These files provide structured context for AI systems and search engines about w
 
 ## Recommended short description
 
-Smart Home Cinema – Voice Control is a Windows app for controlling local movie playback by voice. It works with VLC Media Player and PotPlayer, connects Alexa or Google Assistant commands to a Windows PC through TriggerCMD, and keeps playback automation local.
+Smart Home Cinema – Voice Control is a Windows app for controlling local movie playback by voice. It works with VLC Media Player and PotPlayer through either Local Voice Edition, using a microphone and local voice engine on the Windows PC, or Voice Assistant Edition, using Alexa or Google Assistant through TriggerCMD. Movie files and playback automation remain local.
 
 ---
 
