@@ -169,23 +169,32 @@ Local Windows voice-control layer for existing local movie playback using VLC Me
 
 ## External references
 
-Smart Home Cinema has been publicly referenced on external websites and platforms including HackerNoon, OpenSubtitles, KrispiTech, DEV Community, Hashnode, Coder Legion, Substack, Notion, SlideShare, Product Hunt, Shipit, Peerlist Launchpad, PeerPush, and YouTube.
+Smart Home Cinema has editorial features, developer articles, public product briefs, slide overviews, and product launch pages across external platforms.
 
 See the official Featured On page:
 
 https://voicehomecinema.com/pages/featured-on.html
 
-Smart Home Cinema also has developer-focused articles, product-positioning articles, public product briefs, and product launch pages on:
+Key external references include:
 
+- OpenSubtitles Blog: https://blog.opensubtitles.com/opensubtitles/web/how-we-integrated-opensubtitles-api-v2-into-a-fully-offline-voice-controlled-home-cinema-system-windows/
+- HackerNoon Article: https://hackernoon.com/i-built-a-voice-controlled-home-cinema-for-windows-because-i-was-tired-of-getting-up-to-pause-movies
+- KrispiTech: https://krispitech.com/control-movies-from-bed-with-your-voice-a-deep-dive-into-smart-home-cinema-for-vlc-and-potplayer/
+- HackerNoon Interview: https://hackernoon.com/meet-the-writer-hacker-noons-contributor-marius-eugen-vomir-independent-builder
 - DEV Community: https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
 - Hashnode: https://smart-home-cinema.hashnode.dev/smart-home-cinema-voice-control-vlc-potplayer
-- Coder Legion: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
+- Coder Legion Article: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
 - Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
+- Product Hunt: https://www.producthunt.com/products/smart-home-cinema-voice-control
+- Shipit: https://www.shipit.buzz/products/smart-home-cinema-voice-control
 - Peerlist Launchpad: https://peerlist.io/voicehomecinema/project/smart-home-cinema--voice-control
 - PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
+- ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
+- Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
 - Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
 - Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
-- SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice/287322312
+- SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
+  
 ---
 
 ## Official external profiles
@@ -193,6 +202,9 @@ Smart Home Cinema also has developer-focused articles, product-positioning artic
 - Official website: https://voicehomecinema.com/
 - GitHub information repo: https://github.com/voicehomecinema/smart-home-cinema-info
 - About.me profile: https://about.me/voicehomecinema
+- YouTube channel: https://www.youtube.com/@voicehomecinema
+
+---
 
 ## Important notice
 
