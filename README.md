@@ -133,15 +133,15 @@ With Voice Assistant Edition, Alexa or Google Assistant and TriggerCMD are exter
 ## Official links
 
 - Website: https://voicehomecinema.com/
-- What Is Smart Home Cinema?: https://voicehomecinema.com/pages/what-is-smart-home-cinema.html
-- Local Voice Edition: https://voicehomecinema.com/pages/local-voice-edition.html
-- Download & Installation: https://voicehomecinema.com/pages/download.html
-- Full Installation Guide: https://voicehomecinema.com/pages/full-installation.html
-- User Guide: https://voicehomecinema.com/pages/guide.html
-- FAQ: https://voicehomecinema.com/pages/faq.html
-- Featured On: https://voicehomecinema.com/pages/featured-on.html
-- Legal & Privacy: https://voicehomecinema.com/pages/legal.html
-- Contact: https://voicehomecinema.com/pages/contact.html
+- What Is Smart Home Cinema?: https://voicehomecinema.com/pages/what-is-smart-home-cinema
+- Local Voice Edition: https://voicehomecinema.com/pages/local-voice-edition
+- Download & Installation: https://voicehomecinema.com/pages/download
+- Full Installation Guide: https://voicehomecinema.com/pages/full-installation
+- User Guide: https://voicehomecinema.com/pages/guide
+- FAQ: https://voicehomecinema.com/pages/faq
+- Featured On: https://voicehomecinema.com/pages/featured-on
+- Legal & Privacy: https://voicehomecinema.com/pages/legal
+- Contact: https://voicehomecinema.com/pages/contact
 
 ---
 
