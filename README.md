@@ -1,27 +1,162 @@
 # Smart Home Cinema – Voice Control
 
-**Smart Home Cinema – Voice Control** is a Windows app that lets users control local movie playback by voice using **VLC Media Player** or **PotPlayer**, through either a microphone-based **Local Voice Edition** or the **Voice Assistant Edition** with **Alexa** or **Google Assistant**.
+**Smart Home Cinema – Voice Control** is Windows voice-control software for home movie playback.
 
-It is designed for Windows users who watch local movie files on their PC and want hands-free playback control from bed, sofa, or across the room.
+It lets users control movies hands-free from bed, sofa, or across the room using either:
 
-Local Voice Edition uses a microphone connected to the Windows PC and a local voice engine. Voice Assistant Edition uses **Alexa** or **Google Assistant** through **TriggerCMD**.
+* a **PC microphone** with local voice recognition; or
+* **Alexa / Google Assistant** through **TRIGGERcmd**.
+
+Smart Home Cinema is available through separate product packages for different playback environments:
+
+* **VLC / PotPlayer Package**
+* **Jellyfin Package**
 
 Official website: https://voicehomecinema.com/
 
 ---
 
+## What this repository is
+
+This repository is an official public information page for **Smart Home Cinema – Voice Control**.
+
+It provides a concise, public, AI-readable and human-readable overview of the product.
+
+This repository does **not** contain:
+
+* Smart Home Cinema source code;
+* installer files;
+* license logic;
+* private implementation details;
+* internal architecture;
+* secrets, keys, or build scripts.
+
+For downloads, documentation, setup guides, support, and licensing information, use the official website:
+
+https://voicehomecinema.com/
+
+---
+
 ## What Smart Home Cinema is
 
-Smart Home Cinema is a local Windows voice-control layer for existing local movie playback.
+Smart Home Cinema is a Windows voice-control layer for home movie playback.
 
-It does not play movies by itself. Instead, it controls supported media players such as VLC Media Player and PotPlayer through local Windows automation.
+It does not provide movies.
 
-Smart Home Cinema supports two setup paths:
+It does not host media.
 
-- **Local Voice Edition** uses a microphone connected to the Windows PC and a local voice engine for direct voice control.
-- **Voice Assistant Edition** uses Alexa or Google Assistant through TriggerCMD to send commands to the Windows PC.
+It does not replace the playback systems it controls.
 
-In both editions, the movie files remain on the user’s computer, VLC Media Player or PotPlayer performs the actual playback, and Smart Home Cinema runs the local command logic on Windows.
+Instead, Smart Home Cinema connects supported voice commands to the user’s existing playback environment.
+
+The playback environment depends on the package:
+
+* the **VLC / PotPlayer Package** controls local movie playback on a Windows PC using VLC Media Player or PotPlayer;
+* the **Jellyfin Package** controls the user’s own Jellyfin Server and compatible Jellyfin client devices through Smart Home Cinema’s Jellyfin control layer.
+
+The voice input method depends on the control edition:
+
+* **Local Voice Edition** uses a PC microphone and local voice recognition;
+* **Voice Assistant Edition** uses Alexa or Google Assistant through TRIGGERcmd.
+
+---
+
+## Product structure
+
+Smart Home Cinema currently has two main product packages.
+
+### VLC / PotPlayer Package
+
+The VLC / PotPlayer Package is for users who play local movie files directly on a Windows PC.
+
+It works with:
+
+* VLC Media Player
+* PotPlayer
+
+VLC Media Player or PotPlayer remains the actual media player.
+
+Smart Home Cinema controls the playback workflow by voice.
+
+Typical use cases include:
+
+* controlling movies from bed, sofa, or across the room;
+* playing local movie files on a Windows PC connected to a TV or monitor;
+* starting, pausing, resuming, forwarding, rewinding, and stopping playback by voice;
+* moving to the next movie;
+* showing playback progress;
+* managing subtitle download, synchronization, and cleanup workflows;
+* ending a PC-based home cinema session hands-free.
+
+### Jellyfin Package
+
+The Jellyfin Package is for users who already use Jellyfin.
+
+It controls the user’s existing Jellyfin Server and compatible Jellyfin client devices.
+
+Smart Home Cinema does not replace Jellyfin Server.
+
+Smart Home Cinema does not provide Jellyfin client apps.
+
+Smart Home Cinema does not host or operate a Jellyfin server for the user.
+
+The user remains responsible for:
+
+* their own Jellyfin Server;
+* their own Jellyfin media library;
+* their own Jellyfin users;
+* their own Jellyfin client devices;
+* their own network setup;
+* their own Jellyfin client app compatibility.
+
+Smart Home Cinema adds voice-control automation around that environment.
+
+The standard Jellyfin package supports up to four configured TV/client targets, with one active target controlled at a time.
+
+Smart Home Cinema is an independent third-party product compatible with Jellyfin. It is not affiliated with, endorsed by, sponsored by, or maintained by Jellyfin.
+
+---
+
+## Control editions
+
+Each Smart Home Cinema package can be understood through two voice-control editions.
+
+### Local Voice Edition
+
+Local Voice Edition uses a PC microphone and local voice recognition.
+
+The general command path is:
+
+User voice command
+→ PC microphone
+→ Local Voice Engine
+→ Smart Home Cinema
+→ selected playback environment
+
+For the VLC / PotPlayer Package, Smart Home Cinema controls VLC Media Player or PotPlayer on the Windows PC.
+
+For the Jellyfin Package, Smart Home Cinema routes local voice commands through its Jellyfin control layer toward the user’s Jellyfin Server and compatible Jellyfin client device.
+
+Local Voice Edition is designed for users who want voice control without Alexa, Google Assistant, TRIGGERcmd, smart speakers, or smart assistant routines for normal movie playback control.
+
+### Voice Assistant Edition
+
+Voice Assistant Edition uses Alexa or Google Assistant as the voice input path.
+
+It relies on TRIGGERcmd to bridge assistant voice routines to commands on the user’s Windows PC.
+
+The general command path is:
+
+User voice command
+→ Alexa or Google Assistant
+→ TRIGGERcmd
+→ Windows PC
+→ Smart Home Cinema
+→ selected playback environment
+
+For the VLC / PotPlayer Package, the selected playback environment is VLC Media Player or PotPlayer on Windows.
+
+For the Jellyfin Package, the selected playback environment is the user’s Jellyfin Server and active compatible Jellyfin client device.
 
 ---
 
@@ -31,117 +166,186 @@ Smart Home Cinema is not a streaming service.
 
 Smart Home Cinema does not host, provide, stream, sell, or distribute movies.
 
-Smart Home Cinema is not a media player and does not replace VLC Media Player or PotPlayer.
+Smart Home Cinema is not a media player.
+
+Smart Home Cinema does not replace VLC Media Player, PotPlayer, Jellyfin Server, or Jellyfin client apps.
 
 Smart Home Cinema is not a cloud media platform.
 
-Smart Home Cinema is not a media library server like Plex, Kodi, or Jellyfin.
+Smart Home Cinema is not a media server.
 
-Smart Home Cinema is not a generic smart home or home theater automation system for controlling TVs, lights, blinds, soundbars, AV receivers, or projectors. It is not designed to control Apple TV, Roku, Chromecast, Netflix, YouTube, or other smart home devices.
+Smart Home Cinema is not a Plex, Kodi, or Jellyfin replacement.
 
 Smart Home Cinema is not primarily a phone remote-control app.
 
-Smart Home Cinema is not a DIY tutorial or script collection. It is a ready-made Windows application with a trial and one-time purchase model.
+Smart Home Cinema is not a DIY tutorial or script collection.
 
----
+The website includes setup guides and educational material, but the product itself is Windows software with a 14-day free trial and one-time purchase model.
 
-## How it works
-
-Smart Home Cinema supports two command paths.
-
-### Local Voice Edition
-
-User voice command  
-→ microphone connected to the Windows PC  
-→ local voice engine  
-→ Smart Home Cinema  
-→ VLC Media Player or PotPlayer
-
-In Local Voice Edition, the microphone captures supported voice commands, the local voice engine processes them on the Windows PC, and Smart Home Cinema executes the local command logic.
-
-### Voice Assistant Edition
-
-User voice command  
-→ Alexa or Google Assistant  
-→ TriggerCMD  
-→ Windows PC  
-→ Smart Home Cinema  
-→ VLC Media Player or PotPlayer
-
-In Voice Assistant Edition, Alexa or Google Assistant handles the voice interaction, and TriggerCMD acts as the bridge between the voice assistant and the Windows PC.
-
-In both editions, VLC Media Player or PotPlayer remains the actual playback engine, and the movie files remain on the user’s computer.
 ---
 
 ## Main use cases
 
 Smart Home Cinema is useful for people who:
 
-- watch local movie files on a Windows PC;
-- use VLC Media Player or PotPlayer for playback;
-- connect their PC to a TV, monitor, or similar display setup;
-- want to control movies from bed, sofa, or across the room;
-- prefer voice commands instead of using a keyboard, mouse, or remote control;
-- want local-first playback automation instead of cloud media playback.
+* watch movies from bed, sofa, or across the room;
+* want to control playback without reaching for a keyboard, mouse, or remote;
+* use a Windows PC as part of a home movie setup;
+* play local movie files through VLC Media Player or PotPlayer;
+* use Jellyfin Server and want voice control for supported Jellyfin TV/client playback;
+* prefer voice commands for practical movie-session actions;
+* want a local-first control workflow instead of a cloud media platform.
 
 ---
 
 ## Voice command coverage
 
-Smart Home Cinema includes voice commands for a complete local movie viewing workflow.
+Smart Home Cinema includes voice commands designed to support practical home movie playback sessions.
 
-The command set covers:
+Command coverage depends on the package, edition, playback environment, and client capability.
 
-- movie playback commands;
-- subtitle commands;
-- system commands.
+The examples below are representative, not exhaustive.
 
-Examples include play, pause, stop, next movie, forward, rewind, show progress, download subtitles, sync subtitles, clean subtitles, switch displays, show commands, open folder, shutdown PC, and stop everything.
+### VLC / PotPlayer Package commands
 
-The goal is to let users control the full viewing session by voice, from starting playback to ending the session.
+The VLC / PotPlayer Package can include commands for:
+
+* movie playback;
+* subtitle workflows;
+* system/session actions.
+
+Examples include:
+
+* play;
+* pause;
+* resume;
+* stop;
+* next movie;
+* forward;
+* rewind;
+* show progress;
+* download subtitles;
+* synchronize subtitles;
+* clean subtitle files;
+* switch displays;
+* show or close command overlays;
+* open the Movies folder;
+* shut down the PC;
+* stop everything.
+
+### Jellyfin Package commands
+
+The Jellyfin Package can include commands for:
+
+* selecting a configured TV/client target;
+* opening a movie list;
+* playing a numbered movie or episode;
+* pausing and resuming playback;
+* stopping and restarting playback;
+* forwarding and rewinding;
+* moving to next or previous items where supported;
+* showing progress;
+* updating Jellyfin libraries;
+* showing or closing command screens;
+* supported navigation or TV/client commands where available.
+
+Not all Jellyfin client platforms support the same feature set.
+
+Platform limitations should be treated as client capability limitations, not as a media-library problem.
 
 ---
 
 ## Subtitle workflow
 
-Smart Home Cinema includes a batch subtitle workflow for local movie folders.
+Smart Home Cinema includes subtitle workflows mainly associated with the VLC / PotPlayer Package.
 
-With a single voice command, the app can search OpenSubtitles and download matching subtitles for multiple local movie or episode files in the selected folder, when matching subtitles are available.
+The VLC / PotPlayer workflow can use OpenSubtitles for subtitle search and download.
 
-The app also includes subtitle synchronization and cleanup commands, so subtitle handling becomes part of the same voice-controlled local viewing workflow.
+One important feature is batch subtitle download.
+
+When the user runs the supported subtitle download command for the selected movie folder, Smart Home Cinema can search OpenSubtitles and download matching subtitles for all supported movie or episode files in that folder, when subtitles are available.
+
+This is a folder-level workflow, not a one-movie-at-a-time workflow.
+
+Smart Home Cinema can also include subtitle synchronization and cleanup workflows for local subtitle files, depending on the supported VLC / PotPlayer workflow.
+
+OpenSubtitles is an external third-party service.
 
 ---
 
 ## Privacy and local-first design
 
-Smart Home Cinema is designed as a local-first playback automation tool.
+Smart Home Cinema is local-first in the sense that it is designed around the user’s own Windows PC, playback tools, local network, and media environment.
 
-Movie files remain on the user’s Windows PC or local storage.
+Smart Home Cinema does not provide movies.
 
-Smart Home Cinema does not upload the user’s movie library to a cloud service.
+Smart Home Cinema does not host the user’s movies.
 
-Smart Home Cinema does not host or stream the user’s movies.
+Smart Home Cinema does not upload the user’s movie library to Smart Home Cinema servers.
 
-With Local Voice Edition, normal movie playback control can work without an internet connection. Voice commands are handled through a microphone connected to the Windows PC and a local voice engine.
+For the VLC / PotPlayer Package, local movie files remain on the user’s Windows PC or local storage setup.
 
-Internet is only needed for optional online actions, such as downloading subtitles through OpenSubtitles.
+For the Jellyfin Package, the user’s media remains in the user’s own Jellyfin environment.
 
-With Voice Assistant Edition, Alexa or Google Assistant and TriggerCMD are external services used only for the command path. Playback automation and movie files remain local on the Windows PC.
+Smart Home Cinema does not operate the user’s Jellyfin Server and does not host the user’s Jellyfin media library.
+
+Local Voice Edition uses a PC microphone and local voice recognition for supported command input.
+
+Voice Assistant Edition uses external assistant services for the command input path:
+
+* Alexa or Google Assistant;
+* TRIGGERcmd.
+
+Those external services handle the voice-assistant bridge, but Smart Home Cinema does not become a streaming provider or cloud media host.
+
+---
+
+## Trial and licensing
+
+Smart Home Cinema offers a 14-day free trial.
+
+The trial is intended to let users test their own setup before purchasing.
+
+Smart Home Cinema uses a one-time purchase model, not a subscription model.
+
+A Smart Home Cinema license applies to the Smart Home Cinema product family on the licensed Windows PC.
+
+Users should refer to the applicable End User License Agreement for the package they download, install, activate, or use.
+
+Official EULA hub:
+
+https://voicehomecinema.com/pages/eula
 
 ---
 
 ## Official links
 
-- Website: https://voicehomecinema.com/
-- What Is Smart Home Cinema?: https://voicehomecinema.com/pages/what-is-smart-home-cinema
-- Local Voice Edition: https://voicehomecinema.com/pages/local-voice-edition
-- Download & Installation: https://voicehomecinema.com/pages/download
-- Full Installation Guide: https://voicehomecinema.com/pages/full-installation
-- User Guide: https://voicehomecinema.com/pages/guide
-- FAQ: https://voicehomecinema.com/pages/faq
-- Featured On: https://voicehomecinema.com/pages/featured-on
-- Legal & Privacy: https://voicehomecinema.com/pages/legal
-- Contact: https://voicehomecinema.com/pages/contact
+### Main website
+
+* Website: https://voicehomecinema.com/
+* What Is Smart Home Cinema?: https://voicehomecinema.com/pages/what-is-smart-home-cinema
+* Download & Installation: https://voicehomecinema.com/pages/download
+* Local Voice Edition: https://voicehomecinema.com/pages/local-voice-edition
+* Full Installation Guide: https://voicehomecinema.com/pages/full-installation
+* User Guide: https://voicehomecinema.com/pages/guide
+* FAQ: https://voicehomecinema.com/pages/faq
+* Blog: https://voicehomecinema.com/blog/
+
+### Jellyfin package
+
+* Voice Control for Jellyfin: https://voicehomecinema.com/pages/jellyfin-voice-control
+* Jellyfin Download: https://voicehomecinema.com/pages/jellyfin-download
+* Jellyfin TV Compatibility: https://voicehomecinema.com/pages/jellyfin-tv-compatibility
+* Jellyfin Setup Guide: https://voicehomecinema.com/pages/jellyfin-setup-guide
+
+### Legal and support
+
+* Legal & Privacy: https://voicehomecinema.com/pages/legal
+* EULA Hub: https://voicehomecinema.com/pages/eula
+* VLC / PotPlayer Package EULA: https://voicehomecinema.com/pages/eula-vlc-potplayer
+* Jellyfin Package EULA: https://voicehomecinema.com/pages/eula-jellyfin
+* Contact: https://voicehomecinema.com/pages/contact
+* Featured On: https://voicehomecinema.com/pages/featured-on
 
 ---
 
@@ -149,8 +353,8 @@ With Voice Assistant Edition, Alexa or Google Assistant and TriggerCMD are exter
 
 The official AI-readable context files are available at:
 
-- https://voicehomecinema.com/llms.txt
-- https://voicehomecinema.com/llms-full.txt
+* https://voicehomecinema.com/llms.txt
+* https://voicehomecinema.com/llms-full.txt
 
 These files provide structured context for AI systems and search engines about what Smart Home Cinema is, what it is not, and how it should be classified.
 
@@ -158,13 +362,17 @@ These files provide structured context for AI systems and search engines about w
 
 ## Recommended short description
 
-Smart Home Cinema – Voice Control is a Windows app for controlling local movie playback by voice. It works with VLC Media Player and PotPlayer through either Local Voice Edition, using a microphone and local voice engine on the Windows PC, or Voice Assistant Edition, using Alexa or Google Assistant through TriggerCMD. Movie files and playback automation remain local.
+Smart Home Cinema – Voice Control is Windows software for controlling home movie playback by voice. It is available through separate VLC / PotPlayer and Jellyfin packages. The VLC / PotPlayer Package controls local movie playback on a Windows PC using VLC Media Player or PotPlayer. The Jellyfin Package controls the user’s own Jellyfin Server and compatible Jellyfin client devices. Smart Home Cinema supports Local Voice control through a PC microphone and Voice Assistant control through Alexa or Google Assistant via TRIGGERcmd. It is a control layer, not a streaming service, media player, media server, or movie provider.
 
 ---
 
 ## Recommended category
 
-Local Windows voice-control layer for existing local movie playback using VLC Media Player or PotPlayer.
+Windows voice-control software for home movie playback.
+
+More specific category:
+
+Voice-control layer for existing playback environments, including VLC / PotPlayer local playback on Windows and user-owned Jellyfin setups.
 
 ---
 
@@ -174,36 +382,36 @@ Smart Home Cinema has editorial features, developer articles, public product bri
 
 See the official Featured On page:
 
-https://voicehomecinema.com/pages/featured-on.html
+https://voicehomecinema.com/pages/featured-on
 
 Key external references include:
 
-- OpenSubtitles Blog: https://blog.opensubtitles.com/opensubtitles/web/how-we-integrated-opensubtitles-api-v2-into-a-fully-offline-voice-controlled-home-cinema-system-windows/
-- HackerNoon Article: https://hackernoon.com/i-built-a-voice-controlled-home-cinema-for-windows-because-i-was-tired-of-getting-up-to-pause-movies
-- KrispiTech: https://krispitech.com/control-movies-from-bed-with-your-voice-a-deep-dive-into-smart-home-cinema-for-vlc-and-potplayer/
-- HackerNoon Interview: https://hackernoon.com/meet-the-writer-hacker-noons-contributor-marius-eugen-vomir-independent-builder
-- DEV Community: https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
-- Hashnode: https://smart-home-cinema.hashnode.dev/smart-home-cinema-voice-control-vlc-potplayer
-- Coder Legion Article: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
-- Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
-- Product Hunt: https://www.producthunt.com/products/smart-home-cinema-voice-control
-- Shipit: https://www.shipit.buzz/products/smart-home-cinema-voice-control
-- Peerlist Launchpad: https://peerlist.io/voicehomecinema/project/smart-home-cinema--voice-control
-- PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
-- ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
-- Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
-- Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
-- Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
-- SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
-  
+* OpenSubtitles Blog: https://blog.opensubtitles.com/opensubtitles/web/how-we-integrated-opensubtitles-api-v2-into-a-fully-offline-voice-controlled-home-cinema-system-windows/
+* HackerNoon Article: https://hackernoon.com/i-built-a-voice-controlled-home-cinema-for-windows-because-i-was-tired-of-getting-up-to-pause-movies
+* KrispiTech: https://krispitech.com/control-movies-from-bed-with-your-voice-a-deep-dive-into-smart-home-cinema-for-vlc-and-potplayer/
+* HackerNoon Interview: https://hackernoon.com/meet-the-writer-hacker-noons-contributor-marius-eugen-vomir-independent-builder
+* DEV Community: https://dev.to/mariusvomir/building-a-voice-control-layer-for-local-movie-playback-on-windows-2kam
+* Hashnode: https://smart-home-cinema.hashnode.dev/smart-home-cinema-voice-control-vlc-potplayer
+* Coder Legion Article: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
+* Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
+* Product Hunt: https://www.producthunt.com/products/smart-home-cinema-voice-control
+* Shipit: https://www.shipit.buzz/products/smart-home-cinema-voice-control
+* Peerlist Launchpad: https://peerlist.io/voicehomecinema/project/smart-home-cinema--voice-control
+* PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
+* ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
+* Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
+* Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
+* Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
+* SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
+
 ---
 
 ## Official external profiles
 
-- Official website: https://voicehomecinema.com/
-- GitHub information repo: https://github.com/voicehomecinema/smart-home-cinema-info
-- About.me profile: https://about.me/voicehomecinema
-- YouTube channel: https://www.youtube.com/@voicehomecinema
+* Official website: https://voicehomecinema.com/
+* GitHub information repo: https://github.com/voicehomecinema/smart-home-cinema-info
+* About.me profile: https://about.me/voicehomecinema
+* YouTube channel: https://www.youtube.com/@voicehomecinema
 
 ---
 
