@@ -7,10 +7,14 @@ It lets users control movies hands-free from bed, sofa, or across the room using
 * a **PC microphone** with local voice recognition; or
 * **Alexa / Google Assistant** through **TRIGGERcmd**.
 
-Smart Home Cinema is available through separate product packages for different playback environments:
+Smart Home Cinema is available through two separate product packages for different playback environments:
 
 * **VLC / PotPlayer Package**
 * **Jellyfin Package**
+
+Local Voice Edition and Voice Assistant Edition are available in both packages. The Jellyfin Package also includes Multi-Zone Edition for up to four independently controlled Jellyfin viewing zones.
+
+Smart Home Cinema began with voice control for local movie playback through VLC Media Player and PotPlayer on Windows. That original package remains available. The project later expanded with a separate Jellyfin package for users who manage their media through Jellyfin Server and watch on compatible Jellyfin client devices.
 
 Official website: https://voicehomecinema.com/
 
@@ -54,10 +58,11 @@ The playback environment depends on the package:
 * the **VLC / PotPlayer Package** controls local movie playback on a Windows PC using VLC Media Player or PotPlayer;
 * the **Jellyfin Package** controls the user’s own Jellyfin Server and compatible Jellyfin client devices through Smart Home Cinema’s Jellyfin control layer.
 
-The voice input method depends on the control edition:
+The control edition determines how commands are received and routed:
 
 * **Local Voice Edition** uses a PC microphone and local voice recognition;
-* **Voice Assistant Edition** uses Alexa or Google Assistant through TRIGGERcmd.
+* **Voice Assistant Edition** uses Alexa or Google Assistant through TRIGGERcmd;
+* **Multi-Zone Edition**, available only in the Jellyfin Package, uses Alexa or Google Assistant through TRIGGERcmd and routes each zone-specific command to the explicitly named Jellyfin viewing zone.
 
 ---
 
@@ -111,7 +116,16 @@ The user remains responsible for:
 
 Smart Home Cinema adds voice-control automation around that environment.
 
-The standard Jellyfin package supports up to four configured TV/client targets, with one active target controlled at a time.
+The Jellyfin download package includes three editions:
+
+* **Local Voice Edition** and **Voice Assistant Edition** are the standard Jellyfin editions. They can configure up to four TV/client targets, with one selected target controlled at a time.
+* **Multi-Zone Edition** can configure and independently control up to four Jellyfin viewing zones. Each zone can use its own Jellyfin user session, TV or client device, and Smart Home Cinema Movie List playlist.
+
+In Multi-Zone Edition, the destination is included explicitly in each zone-specific command, such as `TV One Pause Movie` or `TV Two Open Movie List`. Smart Home Cinema does not automatically guess the intended room or device.
+
+Multi-Zone Edition provides independent control, not synchronized playback. Its purpose is to let separate viewing zones operate independently, including when different people are watching different content.
+
+All three Jellyfin editions are included in the same Jellyfin download package. Only one Jellyfin edition should be installed on the Windows PC at a time.
 
 Smart Home Cinema is an independent third-party product compatible with Jellyfin. It is not affiliated with, endorsed by, sponsored by, or maintained by Jellyfin.
 
@@ -119,7 +133,7 @@ Smart Home Cinema is an independent third-party product compatible with Jellyfin
 
 ## Control editions
 
-Each Smart Home Cinema package can be understood through two voice-control editions.
+Local Voice Edition and Voice Assistant Edition are available in both Smart Home Cinema packages. The Jellyfin Package also includes Multi-Zone Edition.
 
 ### Local Voice Edition
 
@@ -127,15 +141,15 @@ Local Voice Edition uses a PC microphone and local voice recognition.
 
 The general command path is:
 
-User voice command
-→ PC microphone
-→ Local Voice Engine
-→ Smart Home Cinema
+User voice command  
+→ PC microphone  
+→ Local Voice Engine  
+→ Smart Home Cinema  
 → selected playback environment
 
 For the VLC / PotPlayer Package, Smart Home Cinema controls VLC Media Player or PotPlayer on the Windows PC.
 
-For the Jellyfin Package, Smart Home Cinema routes local voice commands through its Jellyfin control layer toward the user’s Jellyfin Server and compatible Jellyfin client device.
+For the Jellyfin Package, Smart Home Cinema routes local voice commands through its Jellyfin control layer toward the user’s Jellyfin Server and one selected compatible Jellyfin client device at a time.
 
 Local Voice Edition is designed for users who want voice control without Alexa, Google Assistant, TRIGGERcmd, smart speakers, or smart assistant routines for normal movie playback control.
 
@@ -147,16 +161,54 @@ It relies on TRIGGERcmd to bridge assistant voice routines to commands on the us
 
 The general command path is:
 
-User voice command
-→ Alexa or Google Assistant
-→ TRIGGERcmd
-→ Windows PC
-→ Smart Home Cinema
+User voice command  
+→ Alexa or Google Assistant  
+→ TRIGGERcmd  
+→ Windows PC  
+→ Smart Home Cinema  
 → selected playback environment
 
 For the VLC / PotPlayer Package, the selected playback environment is VLC Media Player or PotPlayer on Windows.
 
-For the Jellyfin Package, the selected playback environment is the user’s Jellyfin Server and active compatible Jellyfin client device.
+For the standard Jellyfin Voice Assistant Edition, the selected playback environment is the user’s Jellyfin Server and one active compatible Jellyfin client device at a time.
+
+### Multi-Zone Edition
+
+Multi-Zone Edition is available only in the Jellyfin Package.
+
+It uses Alexa or Google Assistant through TRIGGERcmd, but changes how Jellyfin commands are routed.
+
+The general command path is:
+
+User voice command  
+→ Alexa or Google Assistant  
+→ TRIGGERcmd  
+→ Windows PC  
+→ Smart Home Cinema Multi-Zone  
+→ explicitly named Jellyfin zone  
+→ Jellyfin Server  
+→ compatible Jellyfin client assigned to that zone
+
+Multi-Zone Edition can configure up to four independent Jellyfin viewing zones.
+
+Each zone can use its own:
+
+* Jellyfin user session;
+* TV or client device;
+* Smart Home Cinema Movie List playlist.
+
+There is no single active TV shared by all zones. The intended destination is included directly in each zone-specific phrase, for example:
+
+* `TV One Pause Movie`
+* `TV Two Forward One Minute`
+* `TV Three Open Movie List`
+* `TV Four Show Commands`
+
+A command addressed to one zone does not change the target or playback state of another zone.
+
+Multi-Zone Edition does not automatically detect the room from which a command was spoken, and it does not synchronize the same playback across several televisions.
+
+Most Multi-Zone commands belong to one specific zone. `Update Libraries` and `Stop Everything` are global commands and do not use a TV prefix.
 
 ---
 
@@ -193,6 +245,7 @@ Smart Home Cinema is useful for people who:
 * use a Windows PC as part of a home movie setup;
 * play local movie files through VLC Media Player or PotPlayer;
 * use Jellyfin Server and want voice control for supported Jellyfin TV/client playback;
+* want independent voice control for several Jellyfin viewing zones;
 * prefer voice commands for practical movie-session actions;
 * want a local-first control workflow instead of a cloud media platform.
 
@@ -237,17 +290,26 @@ Examples include:
 
 The Jellyfin Package can include commands for:
 
-* selecting a configured TV/client target;
-* opening a movie list;
-* playing a numbered movie or episode;
+* selecting a configured TV/client target in the standard Jellyfin editions;
+* addressing a configured viewing zone explicitly in Multi-Zone Edition;
+* opening the Movie List;
+* playing a numbered Movie List item;
 * pausing and resuming playback;
 * stopping and restarting playback;
 * forwarding and rewinding;
 * moving to next or previous items where supported;
-* showing progress;
+* showing playback progress;
+* opening supported movie, collection, playlist, or search views;
 * updating Jellyfin libraries;
+* emptying the Smart Home Cinema Movie List playlist;
 * showing or closing command screens;
-* supported navigation or TV/client commands where available.
+* supported navigation, mute, or other TV/client commands where available.
+
+In the standard Jellyfin editions, the user selects one configured TV/client target and subsequent commands are routed to that active target.
+
+In Multi-Zone Edition, each zone-specific command includes its destination directly. Most commands affect only the named zone, while `Update Libraries` and `Stop Everything` remain global.
+
+Multi-Zone Edition provides independent zone control. It does not synchronize playback across multiple televisions.
 
 Not all Jellyfin client platforms support the same feature set.
 
@@ -291,7 +353,7 @@ Smart Home Cinema does not operate the user’s Jellyfin Server and does not hos
 
 Local Voice Edition uses a PC microphone and local voice recognition for supported command input.
 
-Voice Assistant Edition uses external assistant services for the command input path:
+Voice Assistant Edition and Multi-Zone Edition use external assistant services for the command input path:
 
 * Alexa or Google Assistant;
 * TRIGGERcmd.
@@ -337,6 +399,7 @@ https://voicehomecinema.com/pages/eula
 * Jellyfin Download: https://voicehomecinema.com/pages/jellyfin-download
 * Jellyfin TV Compatibility: https://voicehomecinema.com/pages/jellyfin-tv-compatibility
 * Jellyfin Setup Guide: https://voicehomecinema.com/pages/jellyfin-setup-guide
+* Multi-Zone release article: https://voicehomecinema.com/blog/smart-home-cinema-multi-zone-for-jellyfin-is-now-available
 
 ### Legal and support
 
@@ -362,7 +425,7 @@ These files provide structured context for AI systems and search engines about w
 
 ## Recommended short description
 
-Smart Home Cinema – Voice Control is Windows software for controlling home movie playback by voice. It is available through separate VLC / PotPlayer and Jellyfin packages. The VLC / PotPlayer Package controls local movie playback on a Windows PC using VLC Media Player or PotPlayer. The Jellyfin Package controls the user’s own Jellyfin Server and compatible Jellyfin client devices. Smart Home Cinema supports Local Voice control through a PC microphone and Voice Assistant control through Alexa or Google Assistant via TRIGGERcmd. It is a control layer, not a streaming service, media player, media server, or movie provider.
+Smart Home Cinema – Voice Control is Windows software for controlling home movie playback by voice. It is available through separate VLC / PotPlayer and Jellyfin packages. Local Voice Edition and Voice Assistant Edition are available in both packages. Local Voice Edition uses a PC microphone with local voice recognition, while Voice Assistant Edition uses Alexa or Google Assistant through TRIGGERcmd. The Jellyfin Package also includes Multi-Zone Edition, which uses the same assistant path to control up to four independently controlled Jellyfin viewing zones. The VLC / PotPlayer Package controls local movie playback on a Windows PC using VLC Media Player or PotPlayer. The Jellyfin Package controls the user’s own Jellyfin Server and compatible Jellyfin client devices. Smart Home Cinema is a control layer, not a streaming service, media player, media server, or movie provider.
 
 ---
 
