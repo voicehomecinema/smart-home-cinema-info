@@ -14,7 +14,7 @@ Smart Home Cinema is available through two separate product packages for differe
 
 Local Voice Edition and Voice Assistant Edition are available in both packages. The Jellyfin Package also includes Multi-Zone Edition for up to four independently controlled Jellyfin viewing zones.
 
-Smart Home Cinema began with voice control for local movie playback through VLC Media Player and PotPlayer on Windows. That original package remains available. The project later expanded with a separate Jellyfin package for users who manage their media through Jellyfin Server and watch on compatible Jellyfin client devices.
+Smart Home Cinema began with voice control for local movie playback through VLC Media Player and PotPlayer on Windows. That original package remains available. The project later expanded with a separate Jellyfin Package for users who manage their media through Jellyfin Server and watch on compatible Jellyfin client devices.
 
 Official website: https://voicehomecinema.com/
 
@@ -125,9 +125,13 @@ In Multi-Zone Edition, the destination is included explicitly in each zone-speci
 
 Multi-Zone Edition provides independent control, not synchronized playback. Its purpose is to let separate viewing zones operate independently, including when different people are watching different content.
 
-All three Jellyfin editions are included in the same Jellyfin download package. Only one Jellyfin edition should be installed on the Windows PC at a time.
+All three Jellyfin editions are included in the same Jellyfin download package.
 
 Smart Home Cinema is an independent third-party product compatible with Jellyfin. It is not affiliated with, endorsed by, sponsored by, or maintained by Jellyfin.
+
+### Installation rule
+
+Smart Home Cinema supports only one installed edition per Windows PC at a time, regardless of package. To switch editions, uninstall the currently installed edition before installing another one. Side-by-side installation of multiple Smart Home Cinema editions is not a supported configuration.
 
 ---
 
@@ -393,7 +397,7 @@ https://voicehomecinema.com/pages/eula
 * FAQ: https://voicehomecinema.com/pages/faq
 * Blog: https://voicehomecinema.com/blog/
 
-### Jellyfin package
+### Jellyfin Package
 
 * Voice Control for Jellyfin: https://voicehomecinema.com/pages/jellyfin-voice-control
 * Jellyfin Download: https://voicehomecinema.com/pages/jellyfin-download
