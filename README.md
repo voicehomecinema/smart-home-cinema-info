@@ -462,7 +462,6 @@ Key external references include:
 * Coder Legion Article: https://coderlegion.com/16662/what-smart-home-cinema-taught-me-about-building-reliable-local-automation-on-windows
 * Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
 * Product Hunt: https://www.producthunt.com/products/smart-home-cinema-voice-control
-* Shipit: https://www.shipit.buzz/products/smart-home-cinema-voice-control
 * Peerlist Launchpad: https://peerlist.io/voicehomecinema/project/smart-home-cinema--voice-control
 * PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
 * ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
