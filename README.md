@@ -466,6 +466,7 @@ Key external references include:
 * PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
 * ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
 * Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
+* Uneed Launchpad: https://www.uneed.best/tool/smart-home-cinema-voice-control
 * Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
 * Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
 * SlideShare — VLC / PotPlayer Package: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
