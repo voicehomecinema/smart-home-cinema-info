@@ -468,7 +468,8 @@ Key external references include:
 * Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
 * Substack: https://voicehomecinema.substack.com/p/the-hardest-part-wasnt-building-smart
 * Notion: https://tasty-rainbow-cd0.notion.site/Smart-Home-Cinema-Voice-Control-354df175884080128907e96858040eba
-* SlideShare: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
+* SlideShare — VLC / PotPlayer Package: https://www.slideshare.net/slideshow/smart-home-cinema-voice-control-local-movie-playback-controlled-by-voice-48bb/287572400
+* SlideShare — Jellyfin Package: https://www.slideshare.net/slideshow/smart-home-cinema-jellyfin-slideshare-overview-v6-pdf/288921668
 
 ---
 
