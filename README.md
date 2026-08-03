@@ -463,6 +463,7 @@ Key external references include:
 * Coder Legion Product Launch: https://coderlegion.com/16683/smart-home-cinema-voice-control
 * Product Hunt: https://www.producthunt.com/products/smart-home-cinema-voice-control
 * Peerlist Launchpad: https://peerlist.io/voicehomecinema/project/smart-home-cinema--voice-control
+* Peerlist Launchpad — Jellyfin Package: https://peerlist.io/voicehomecinema/project/smart-home-cinema-for-jellyfin
 * PeerPush: https://peerpush.net/p/smart-home-cinema-voice-control
 * ProductLaunches.in: https://www.productlaunches.in/products/smart-home-cinema-voice-control
 * Solo Launches: https://www.sololaunches.com/startups/smart-home-cinema-voice-control
